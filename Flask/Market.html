@@ -1,8 +1,47 @@
-{%block title%}
-Market
-{% endblock %}
-
-{% block content %}
+<!doctype html>
+<html lang="en" style="margin-left: 5px;">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      <script src="https://kit.fontawesome.com/c164de392e.js" crossorigin="anonymous"></script>
+      <title>home</title>
+   </head>
+   <body style="height: 100%;">
+      <nav class="navbar navbar-expand-md navbar-dark " >
+         <a class="navbar-brand" href="#">
+            <image src="{{url_for('static', filename = 'digi.png')}}"></image>
+            <width="50" height="50" alt="" />
+         </a>
+         <a class="navbar-brand" href="#" style="color:black"><strong>DS Flea Market</strong> </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item active">
+                  <a class="nav-link" href="#" style="color:black">Home <span
+                     class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#" style="color:black">Market</a>
+               </li>
+            </ul>
+            <ul class="navbar-nav">
+            </ul>
+            <ul class="navbar-nav">
+               <li class="nav-item">
+                  <a class="nav-link" href="#" style="color:black">Sign In</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#" style="color:black">Register</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
       <table class="table table-hover " style="margin-left: 100px; margin: right 300 px; ">
          <thead>
             <tr>
@@ -30,4 +69,97 @@ Market
             {% endfor %}
          </tbody>
       </table>
-{% endblock %}
+
+      <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+         crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+         crossorigin="anonymous"></script>
+      <!-- footer -->
+      <style>
+         .footer {
+         background-color: #303036;
+         color: white;
+         height: 350px;
+         position: relative; }
+         .footer .footer-content{
+         height: 350px;
+         display: flex;
+         }
+         .footer .footer-bottom{
+         background-color:#343a40;
+         color:#686868;
+         height: 50px;
+         width: 100%;
+         text-align: center;
+         position: absolute;
+         bottom: 0px;
+         left: 0px;
+         padding-top: 20px;   
+         }
+         .footer .footer-content .footer-section{
+         flex: 1;
+         padding: 10px;
+         }
+      </style>
+      <div class="footer">
+         <div class="footer-content">
+            <div class="footer-section about">
+               <h1 class="logo-text"><span>DS Flea Market Inc.</span></h1>
+               <p>We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. 
+                  We also disclose information about your use of our site with our social media, advertising and analytics partners.
+               </p>
+               <div class="contact">
+                  <span><i class="fas fa-phone"></i> &nbsp;123-456-987</span>
+                  <span><i class="fas fa-envelope" ></i> &nbsp;info@dsfleamarket.com</span>
+               </div>
+               <div class="socials">
+                  <a href="#"><i class="fab fa-facebook" style="color: white ;"></i></a>
+                  <a href="#"><i class="fab fa-instagram" style="color: white;"></i></a>
+                  <a href="#"><i class="fab fa-twitter" style="color: white;"></i></a>
+                  <a href="#"><i class="fab fa-youtube" style="color: white;"></i></a>
+               </div>
+            </div>
+            <div class="footer-section links">
+               <h2>Quick Links</h2>
+               <br>
+               <ul>
+                  <a href="">
+                     <li style="color: lightblue ;">Events</li>
+                  </a>
+                  <a href="">
+                     <li style="color: lightblue ;">Team</li>
+                  </a>
+                  <a href="">
+                     <li style="color: lightblue ;">Mentors</li>
+                  </a>
+                  <a href="">
+                     <li style="color: lightblue ;">Terms & Conditions</li>
+                  </a>
+                  <a href="">
+                     <li style="color: lightblue ;">Events</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="footer-section contact-form">
+               <h2>Contact Us</h2>
+               <br>
+               <form action="">
+                  <input type="email" name="email" class="text-input contact-input" placeholder="Your email address..."><br>
+                  <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea> <br>
+                  <button type="submit" class="btn btn-big" style="background-color: lightblue;">
+                  <i class="fas fa-envelope"></i>
+                  Send
+                  </button>
+               </form>
+            </div>
+         </div>
+         <div class="footer-bottom" style="color: white;">
+            &copy; dsfleamarket.com
+         </div>
+      </div>
+   </body>
+
+</html>
