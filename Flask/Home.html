@@ -1,0 +1,35 @@
+{%block title%}
+Home
+{% endblock %}
+
+{% block content %}
+<style>
+  .container {
+    position: relative;
+  }
+
+  .text-block {
+    position: absolute;
+    bottom: 90px;
+    right: 20px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+</style>
+<div>
+  <img src="{{url_for('static', filename = 'background.png')}}" alt="DS Flea Market" style="width:100%;">
+  <div class="text-block">
+    <div class="jumbotron">
+      <h1 class="display-4" style="color: black;">The World of Things!</h1>
+      <p class="lead" style="color: black;">Buy all that you ever wanted to buy... </p>
+      <hr class="my-4">
+      <p style="color: black;">You can purchase or sell an item available in the market</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+      </p>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
